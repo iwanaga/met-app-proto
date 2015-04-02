@@ -7,6 +7,32 @@
 
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
+var Thermohygro = require('../api/thermohygro/thermohygro.model');
+
+Thermohygro.find({}).remove(function () {
+  Thermohygro.create({
+      temperature: Math.random() * (30 - 5) + 5,
+      humidity: Math.random() * (80 - 20) + 20,
+      heatIndex: Math.random() * (80 - 20) + 20
+    }, {
+      temperature: Math.random() * (30 - 5) + 5,
+      humidity: Math.random() * (80 - 20) + 20,
+      heatIndex: Math.random() * (80 - 20) + 20
+    }, {
+      temperature: Math.random() * (30 - 5) + 5,
+      humidity: Math.random() * (80 - 20) + 20,
+      heatIndex: Math.random() * (80 - 20) + 20
+    }, {
+      temperature: Math.random() * (30 - 5) + 5,
+      humidity: Math.random() * (80 - 20) + 20,
+      heatIndex: Math.random() * (80 - 20) + 20
+    }, {
+      temperature: Math.random() * (30 - 5) + 5,
+      humidity: Math.random() * (80 - 20) + 20,
+      heatIndex: Math.random() * (80 - 20) + 20
+    }
+  );
+});
 
 Thing.find({}).remove(function() {
   Thing.create({
