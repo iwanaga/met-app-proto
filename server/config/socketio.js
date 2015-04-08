@@ -18,6 +18,7 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/pressure/pressure.socket').register(socket);
   require('../api/thermohygro/thermohygro.socket').register(socket);
   require('../api/thing/thing.socket').register(socket);
 }
