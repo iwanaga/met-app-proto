@@ -4,7 +4,7 @@ angular.module('metAppApp')
   .config(function ($stateProvider) {
     $stateProvider
       .state('thermohygro', {
-        url: '/',
+        url: '/thermohygro',
         templateUrl: 'app/thermohygro/thermohygro.html',
         controller: 'ThermohygroCtrl'
       });
