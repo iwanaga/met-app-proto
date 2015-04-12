@@ -5,7 +5,7 @@ var Thermohygro = require('./thermohygro.model');
 
 // Get list of thermohygros
 exports.index = function(req, res) {
-  Thermohygro.find().sort('-createdAt').limit(30).exec(function (err, thermohygros) {
+  Thermohygro.find().sort('-createdAt').limit(10).exec(function (err, thermohygros) {
     if(err) { return handleError(res, err); }
     return res.json(200, thermohygros);
   });
