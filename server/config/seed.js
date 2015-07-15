@@ -9,6 +9,7 @@ var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
 var Thermohygro = require('../api/thermohygro/thermohygro.model');
 var Pressure = require('../api/pressure/pressure.model');
+var Illuminance = require('../api/illuminance/illuminance.model');
 
 Thermohygro.find({}).remove(function () {
   Thermohygro.create({
@@ -48,6 +49,22 @@ Pressure.find({}).remove(function() {
     pressure: Math.random() * (1030 - 990) + 990
   },{
     pressure: Math.random() * (1030 - 990) + 990
+  });
+});
+
+Illuminance.find({}).remove(function() {
+  Illuminance.create({
+    illuminance: Math.random() * 1023
+  }, {
+    illuminance: Math.random() * 1023
+  }, {
+    illuminance: Math.random() * 1023
+  },  {
+    illuminance: Math.random() * 1023
+  },  {
+    illuminance: Math.random() * 1023
+  },{
+    illuminance: Math.random() * 1023
   });
 });
 
