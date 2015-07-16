@@ -13,6 +13,10 @@ angular.module('metAppApp')
           pressure: {
             templateUrl: 'app/pressure/pressure.html',
             controller: 'PressureCtrl'
+          },
+          illuminance: {
+            templateUrl: 'app/illuminance/illuminance.html',
+            controller: 'IlluminanceCtrl'
           }
         }
       }
