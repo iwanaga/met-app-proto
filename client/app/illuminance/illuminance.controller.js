@@ -2,11 +2,6 @@
 
 angular.module('metAppApp')
   .controller('IlluminanceCtrl', function ($scope, illuminanceService) {
-    var now = new Date();
-    function getDateString(date) {
-      return ('0' + (date.getMonth() + 1)).slice(-2) + '月' + ('0' + date.getDate()).slice(-2) + '日';
-    }
-
     illuminanceService.query(function (data) {
       $scope.data = [
         {
@@ -49,7 +44,7 @@ angular.module('metAppApp')
       },
       title: {
         enable: true,
-        text: getDateString(now)
+        text: 'illuminace (CdS)'
       },
       caption: {
         enable: false
