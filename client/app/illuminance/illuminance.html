@@ -4,15 +4,5 @@
   </div>
 </md-toolbar>
 <md-content class="md-padding">
-  <md-list>
-    <md-item ng-repeat="i in illuminances">
-      <md-item-content>
-        <div class="md-tile-content">
-          <div>Illuminance: {{::i.illuminance | number: 0}}</div>
-          <div>Measured: {{::i.createdAt | date: 'M/d HH:mm'}}</div>
-        </div>
-      </md-item-content>
-      <md-divider ng-if="!$last"></md-divider>
-    </md-item>
-  </md-list>
+  <nvd3 options="options" data="data"></nvd3>
 </md-content>

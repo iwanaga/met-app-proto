@@ -5,7 +5,7 @@ var Illuminance = require('./illuminance.model');
 
 // Get list of illuminances
 exports.index = function(req, res) {
-  Illuminance.find(function (err, illuminances) {
+  Illuminance.find({ createdAt: { $gt: new Date() - 24 * 60 * 60 }}, function (err, illuminances) {
     if(err) { return handleError(res, err); }
     return res.status(200).json(illuminances);
   });

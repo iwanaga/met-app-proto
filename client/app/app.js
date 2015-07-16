@@ -6,7 +6,8 @@ angular.module('metAppApp', [
   'ngSanitize',
   'btford.socket-io',
   'ui.router',
-  'ngMaterial'
+  'ngMaterial',
+  'nvd3'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
