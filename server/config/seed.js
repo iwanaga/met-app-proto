@@ -53,19 +53,12 @@ Pressure.find({}).remove(function() {
 });
 
 Illuminance.find({}).remove(function() {
-  Illuminance.create({
-    illuminance: Math.random() * 1023
-  }, {
-    illuminance: Math.random() * 1023
-  }, {
-    illuminance: Math.random() * 1023
-  },  {
-    illuminance: Math.random() * 1023
-  },  {
-    illuminance: Math.random() * 1023
-  },{
-    illuminance: Math.random() * 1023
-  });
+  Illuminance.create({illuminance: Math.random() * 1023});
+  Illuminance.create({illuminance: Math.random() * 1023});
+  Illuminance.create({illuminance: Math.random() * 1023});
+  Illuminance.create({illuminance: Math.random() * 1023});
+  Illuminance.create({illuminance: Math.random() * 1023});
+  Illuminance.create({illuminance: Math.random() * 1023});
 });
 
 User.find({}).remove(function() {
