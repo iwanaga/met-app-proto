@@ -5,7 +5,7 @@ var Pressure = require('./pressure.model');
 
 // Get list of pressures
 exports.index = function(req, res) {
-  Pressure.find().sort('-createdAt').limit(10).exec(function (err, pressures) {
+  Pressure.find({createdAt: {$gt: new Date(new Date() - 24 * 60 * 60 * 1000)}}).limit(290).exec(function (err, pressures) {
     if(err) { return handleError(res, err); }
     return res.json(200, pressures);
   });
